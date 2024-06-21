@@ -75,6 +75,11 @@ button{
     background-color: #2a2a2c;
     cursor: pointer;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .equalBtn, .operator{
@@ -106,6 +111,14 @@ button{
 
 #multiply {
     padding: 1rem 0;
+}
+
+.history i, .menu {
+    transition: transform 0.3s ease;
+}
+
+.history i:hover, .menu:hover {
+    transform: scale(1.1);
 }
 
 .one {
@@ -239,4 +252,12 @@ button{
         transform: scale(0.8);
         transition: all 0.3s ease;
     }
+}
+
+.rec {
+    transition: all 0.3s ease;
+}
+
+.rec:hover {
+    transform: scale(1.1);
 }
