@@ -199,6 +199,7 @@ button:hover {
     border-bottom-left-radius: 1rem;
     padding-top: 1rem;
     overflow-y: auto;
+    overflow-x: auto;
 }
 
 .deleteall {
