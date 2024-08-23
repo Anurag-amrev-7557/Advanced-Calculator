@@ -43,12 +43,17 @@ body {
     align-items: end;
 }
 
-.options {
+.box {
     position: absolute;
-    color: white;
-    z-index: 5;
     bottom: 1.7rem;
     left: 1.7rem;
+    overflow: hidden;
+}
+
+.options {
+    position: relative;
+    color: white;
+    z-index: 5;
     padding: 10px 20px;
     background-color: rgb(28, 28, 30);
     border-radius: 1rem;
@@ -57,7 +62,7 @@ body {
     align-items: start;
     justify-content: center;
     display: none;
-    animation: fadeIn 0.5s ease;
+    transition: all 0.4s ease;
 }
 
 .options>span {
@@ -319,6 +324,7 @@ button:hover {
 }
 
 
+
 .rec {
     transition: all 0.3s ease;
 }
@@ -348,3 +354,32 @@ button:hover {
 }
 
 
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: -0.3s;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+                transform: translateY(1000px);
+        opacity: 0;
+    }
+    90% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.dimmed {
+    background-color: rgba(0, 0, 0, 0.9); 
+    button, input {
+        color: rgba(255,255,255, 0.4);
+    }
+    .bar {
+        color: rgba(255, 159, 10, 0.4)
+    }
+    transition: background-color 0.3s ease;
+}

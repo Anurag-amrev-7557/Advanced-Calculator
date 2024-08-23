@@ -15,6 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.container');
     const options = document.querySelector(".options");
     const optionsdiv = document.querySelector("#double");
+    const dim = document.querySelector(".dim");
+
 
     function applyFocus() {
         if (window.innerWidth > 715.56) {
@@ -32,12 +34,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    let isDimmed = false;
+
     optionsdiv.addEventListener("click", () => {
+        calculator.classList.toggle('dimmed');
+        isDimmed = true;
         options.style.display = "block";
     })
 
     document.addEventListener('click', function(event) {
         if(!optionsdiv.contains(event.target)) {
+            if(isDimmed) {
+                calculator.classList.remove('dimmed');
+            }
             options.style.display = 'none';
         }
     });
