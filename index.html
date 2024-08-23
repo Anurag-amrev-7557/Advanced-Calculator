@@ -8,10 +8,12 @@
     <title>Calculator - By Anurag</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -35,6 +37,14 @@
         </div>
       </div>
       <div class="calculator">
+        <div class="options">
+            <span style="margin-top: 1rem"><span class="material-symbols-outlined">
+              calculate
+              </span><span>Basic</span></span>
+            <span><span class="material-symbols-outlined">
+              function
+              </span><span>Scientific</span></span>
+        </div>
         <div class="history"><i class="fa-solid fa-bars"></i></div>
         <div class="eqn"></div>
         <div class="result">
@@ -70,14 +80,13 @@
         </div>
 
         <div class="one">
-          <button class="button number" id="double">00</button>
+          <span id="double"><i class="fa-solid fa-calculator"></i></span>
           <button class="button number" id="zero">0</button>
           <button class="button number" id="dot">.</button>
           <button class="button equalBtn" id="equal">=</button>
         </div>
       </div>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>

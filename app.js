@@ -10,8 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const history = document.querySelector('.record');
     const bar = document.querySelector('.history');
     const panel = document.querySelector(".panel");
-    const menu = document.querySelector('.menu');
+    const menu = document.querySelector('.fa-bars');
     const calculator = document.querySelector('.calculator');
+    const container = document.querySelector('.container');
+    const options = document.querySelector(".options");
+    const optionsdiv = document.querySelector("#double");
 
     function applyFocus() {
         if (window.innerWidth > 715.56) {
@@ -28,6 +31,10 @@ window.addEventListener('DOMContentLoaded', () => {
             applyFocus();
         });
     });
+
+    optionsdiv.addEventListener("click", () => {
+        options.style.display = "none";
+    })
     
     let resultDisplayed = false;
     let string = "";
@@ -254,18 +261,29 @@ window.addEventListener('DOMContentLoaded', () => {
     let editmode = false;
     bar.addEventListener('click', () => {
         if(editmode) {
+            container.style.animation = 'fadeIn 0.5s ease reverse';
+            calculator.style.borderTopLeftRadius = '0';
+            calculator.style.borderBottomLeftRadius = '0';
+            panel.style.display = 'none';
+            calculator.style.transform = 'translateX(0rem)';
             calculator.style.borderTopLeftRadius = '16px';
             calculator.style.borderBottomLeftRadius = '16px';
-            panel.style.display = 'none';
+            setTimeout(() => {
+                calculator.style.borderTopLeftRadius = '16px';
+                calculator.style.borderBottomLeftRadius = '16px';
+            }, 500);
             editmode = false;
         }
         else {
-            panel.classList.add('animate__animated', 'animate__slideInRight');
-            calculator.classList.add('animate__animated', 'animate__slideInLeft');
+            panel.style.animation = 'slideLeft 0.7s ease';
+            panel.style.transition = 'all 0.5s ease';
+            calculator.style.animation = 'slideRight 0.7s ease';
+            calculator.style.transition = 'all 0.7s ease';
             calculator.style.borderTopLeftRadius = '0';
             calculator.style.borderBottomLeftRadius = '0';
             panel.style.display = 'block';
             editmode = true;
+
         }
         applyFocus();
     })
