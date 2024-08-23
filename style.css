@@ -239,7 +239,7 @@ button:hover {
     }
 
     .container {
-        transform: scale(0.75);
+        transform: scale(0.77);
         transition: all 0.3s ease;
     }
 }
@@ -250,7 +250,7 @@ button:hover {
     }
 
     .container {
-        transform: scale(0.75);
+        transform: scale(0.77);
         transition: all 0.3s ease;
     }
 }
