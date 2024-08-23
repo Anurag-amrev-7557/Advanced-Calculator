@@ -33,8 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     optionsdiv.addEventListener("click", () => {
-        options.style.display = "none";
+        options.style.display = "block";
     })
+
+    document.addEventListener('click', function(event) {
+        if(!optionsdiv.contains(event.target)) {
+            options.style.display = 'none';
+        }
+    });
     
     let resultDisplayed = false;
     let string = "";
