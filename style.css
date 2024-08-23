@@ -60,7 +60,7 @@ body {
 }
 
 .options>span {
-    font-size: 2rem;
+    font-size: 1.1rem;
     display: flex;
     margin-bottom: 1rem;
     justify-content: start;
@@ -113,6 +113,10 @@ button:hover {
 
 #double:hover {
     transform: scale(1.1);
+}
+
+#double i {
+    font-size: 2rem;
 }
 
 .equalBtn, .operator{
