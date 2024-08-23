@@ -39,6 +39,10 @@ window.addEventListener('DOMContentLoaded', () => {
     optionsdiv.addEventListener("click", () => {
         calculator.classList.toggle('dimmed');
         isDimmed = true;
+        let arr = Array.from(buttons);
+        arr.forEach(button => {
+            button.disabled = true;
+        })
         options.style.display = "block";
     })
 
@@ -50,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
             options.style.display = 'none';
         }
     });
+    
     
     let resultDisplayed = false;
     let string = "";
