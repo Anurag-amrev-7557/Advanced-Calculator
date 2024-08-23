@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let arr = Array.from(buttons);
         arr.forEach(button => {
             button.disabled = true;
-        })
+        });
         options.style.display = "block";
     })
 
@@ -50,11 +50,14 @@ window.addEventListener('DOMContentLoaded', () => {
         if(!optionsdiv.contains(event.target)) {
             if(isDimmed) {
                 calculator.classList.remove('dimmed');
+                let arr = Array.from(buttons);
+                arr.forEach(button => {
+                button.disabled = false;
+        });
             }
             options.style.display = 'none';
         }
     });
-    
     
     let resultDisplayed = false;
     let string = "";
