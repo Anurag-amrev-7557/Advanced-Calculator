@@ -13,7 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu');
     const calculator = document.querySelector('.calculator');
 
-
+    function applyFocus() {
+        if (window.innerWidth > 715.56) {
+            input.focus();
+        }
+    }
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -21,14 +25,14 @@ window.addEventListener('DOMContentLoaded', () => {
                 clean.id = 'del';
                 clean.innerHTML = 'DEL';
             }
+            applyFocus();
         });
     });
     
-    input.focus();
     let resultDisplayed = false;
-    
     let string = "";
     let arr = Array.from(buttons);
+
     arr.forEach(button => {
         button.addEventListener('click', (e) =>{
             if(e.target.id == 'equal'){
@@ -114,8 +118,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 input.value = string;
             } 
-            input.focus();
-        })
+            applyFocus();
+        });
     });
     
     input.addEventListener('keydown', (e) => {
@@ -185,7 +189,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 resultDisplayed = false;
             }
         }
-        input.focus();
+        applyFocus();
     });
 
     calc.addEventListener('click', (e) => {
@@ -196,7 +200,7 @@ window.addEventListener('DOMContentLoaded', () => {
             eqn.innerHTML = eqncontainer.innerHTML;
             input.value = resultcontainer.innerHTML;
         }
-        input.focus();
+        applyFocus();
     });
 
 
@@ -222,7 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 deleteall.style.backgroundColor = '#1c1c1e';
             }, 550);
         }
-        input.focus();
+        applyFocus();
     });
 
     deletespan.addEventListener('click', () => {
@@ -244,7 +248,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         edit.innerHTML = 'Edit';
         editProcess = false;
-        input.focus();
+        applyFocus();
     }); 
 
     let editmode = false;
@@ -263,7 +267,7 @@ window.addEventListener('DOMContentLoaded', () => {
             panel.style.display = 'block';
             editmode = true;
         }
-        input.focus();
+        applyFocus();
     })
 
     menu.addEventListener('click', () => {
@@ -271,11 +275,11 @@ window.addEventListener('DOMContentLoaded', () => {
         calculator.style.borderBottomLeftRadius = '16px';
         panel.style.display = 'none';
         editmode = false;
-        input.focus();
+        applyFocus();
     })
 
     history.addEventListener('click', () => {
-        input.focus();
+        applyFocus();
     })
 
 });
