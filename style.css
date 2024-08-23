@@ -96,10 +96,12 @@ input{
     user-select: auto;
     outline: none;
     caret-color: transparent;
+    transition: all 0.3s ease;
 }
 
 input::placeholder{
     color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 button{
@@ -128,6 +130,7 @@ button:hover {
 .equalBtn, .operator{
     background-color: rgb(255, 159, 10);
     font-size: 2rem;
+    transition: all 0.3s ease;
 }
 
 .number {
@@ -135,8 +138,9 @@ button:hover {
 }
 
 .operators {
-    background-color: #5c5b60;
+    background-color: rgb(92, 91, 96);
     font-size: 1.55rem;
+    transition: all 0.3s ease;
 }
 
 #divide {
@@ -157,7 +161,7 @@ button:hover {
 }
 
 .history i, .menu {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .history i:hover, .menu:hover {
@@ -375,11 +379,18 @@ button:hover {
 
 .dimmed {
     background-color: rgba(0, 0, 0, 0.9); 
+
     button, input, input::placeholder {
         color: rgba(255,255,255, 0.4);
     }
-    .bar, .equalBtn, .operator {
-        color: rgba(255, 159, 10, 0.4)
+    .history i {
+        color: rgba(255, 159, 10, 0.4);
+    }
+    .equalBtn, .operator{
+        background-color: rgba(255, 159, 10, 0.4);
+    }
+    .operators {
+        background-color: rgba(92, 91, 96, 0.4);
     }
     transition: background-color 0.3s ease;
 }
