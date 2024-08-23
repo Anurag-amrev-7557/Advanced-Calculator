@@ -393,5 +393,8 @@ button:hover {
     .operators {
         background-color: rgba(92, 91, 96, 0.4);
     }
+    .eqn {
+        color: rgba(255, 255, 255, 0.3);
+    }
     transition: background-color 0.3s ease;
 }
