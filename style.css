@@ -82,6 +82,10 @@ body {
     margin-right: 0.7rem;
 }
 
+#basic {
+    color: rgb(255, 159, 10);
+}
+
 input{
     width: 320px;
     border: none;
