@@ -15,7 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.container');
     const options = document.querySelector(".options");
     const optionsdiv = document.querySelector("#double");
-    const dim = document.querySelector(".dim");
+    const toggleDarkMode = document.querySelector('#checkbox');
+    let body = document.getElementsByTagName("BODY")[0];
+    const toggleSpan = document.querySelector(".darkmode span");
 
 
     function applyFocus() {
@@ -35,6 +37,25 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     let isDimmed = false;
+    let isDark = false;
+
+    toggleDarkMode.addEventListener("click", () => {
+        if(isDark) {
+            body.style.backgroundColor = "#fff";
+            toggleSpan.style.color = "#000";
+            calculator.style.backgroundColor = "#000";
+            input.style.color = "#fff";
+            eqn.style.color = "#424242";
+            isDark = false;
+        } else {
+            body.style.backgroundColor = "#000";
+            toggleSpan.style.color = "#fff";
+            calculator.style.backgroundColor = "#fff";
+            input.style.color = "#000";
+            eqn.style.color = "#424242";
+            isDark = true;
+        }
+    })
 
     optionsdiv.addEventListener("click", () => {
         calculator.classList.toggle('dimmed');
