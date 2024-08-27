@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const optionsdiv = document.querySelector("#double");
     const toggleDarkMode = document.querySelector('#checkbox');
     let body = document.getElementsByTagName("BODY")[0];
-    const toggleSpan = document.querySelector(".darkmode span");
+    const toggleSpan = document.querySelector(".darkmode label");
 
 
     function applyFocus() {
