@@ -106,6 +106,10 @@ input::placeholder{
     transition: all 0.3s ease;
 }
 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
 button{
     border: none;
     width: 60px;
