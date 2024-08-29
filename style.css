@@ -99,7 +99,7 @@ input{
     outline: none;
     caret-color: transparent;
     transition: all 0.3s ease;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 input::placeholder{
