@@ -67,9 +67,6 @@ window.addEventListener('DOMContentLoaded', () => {
         options.style.display = "block";
     })
     
-        document.querySelectorAll(#inputBox).forEach(el => {
-         el.scrollLeft = el.scrollWidth;
-    })
 
     document.addEventListener('click', function(event) {
         if(!optionsdiv.contains(event.target)) {
